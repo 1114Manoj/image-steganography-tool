@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────────────────────────
+#  Advanced Image Steganography Tool — Python Dependencies
+# ─────────────────────────────────────────────────────────────────
+#
+#  Install all dependencies at once:
+#    pip install -r requirements.txt
+#
+#  Core (required)
+# ─────────────────────────────────────────────────────────────────
+Pillow>=10.0.0          # Image I/O and manipulation
+numpy>=1.24.0           # Array operations for pixel manipulation
+
+# ─────────────────────────────────────────────────────────────────
+#  Advanced features (optional but recommended)
+# ─────────────────────────────────────────────────────────────────
+pycryptodome>=3.18.0    # AES-256-CBC encryption  (--password flag)
+scipy>=1.11.0           # DCT steganography       (--method dct)
+PyWavelets>=1.4.0       # DWT steganography       (--method dwt)
+
+# ─────────────────────────────────────────────────────────────────
+#  GUI (optional — only needed to run stegano_gui.py)
+# ─────────────────────────────────────────────────────────────────
+# tkinter ships with the standard Python distribution on most
+# systems. If it is missing on Linux, install the OS package:
+#   sudo apt install python3-tk          # Debian/Ubuntu
+#   sudo dnf install python3-tkinter     # Fedora/RHEL
+
+# ─────────────────────────────────────────────────────────────────
+#  Executable packaging (dev-only — not needed by end-users)
+# ─────────────────────────────────────────────────────────────────
+pyinstaller>=5.13.0     # Creates the standalone executable
